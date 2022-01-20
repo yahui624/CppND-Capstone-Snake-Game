@@ -21,7 +21,7 @@ void Food::showFood(Snake &snake) {
 }
 
 void Food::randEffect() {
-    std::uniform_int_distribution<size_t> rand(0, 2);
+    std::uniform_int_distribution<size_t> rand(0, 3);
     effect = static_cast<foodEffect>(rand(gen));
 }
 
@@ -34,6 +34,9 @@ void Food::applyEffect(float &speed) {
     case foodEffect::fast: 
         speed = 1.5;
         break; 
+    case foodEffect::crazy: 
+        speed = 2.3; 
+        break;
     case foodEffect::normal:
         speed = 1;
         break;

@@ -17,7 +17,7 @@ class Food {
         void effectDuration(); 
 
     private:
-        enum class foodEffect {slow, fast, normal};
+        enum class foodEffect {slow, fast, crazy, normal};
         foodEffect effect; 
         std::random_device rd; 
         std::mt19937 gen;
